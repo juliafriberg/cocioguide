@@ -1,0 +1,58 @@
+.Comment-div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  background-color: var(--background-light);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.Comment-text {
+  margin-top: 0px;
+  font-style: italic;
+}
+
+.Comment-header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  font-size: 15px;
+  width: 100%;
+}
+
+.Comment-date {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+
+}
+
+.Comment-worktitle {
+  font-style: italic;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+.Comment-author {
+  margin-bottom: 0px;
+}
+
+.Comment-author-div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+.Guide-body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.content {
+   -webkit-flex: 4 0 0;
+   flex: 4 0 0;
+   background-color: var(--background-light);
+   margin-left: 40px;
+   padding: 0px;
+   padding-bottom: 40px;
+   margin-right: 40px;
+}
+.menu {
+   -webkit-flex: 1 0 0;
+   flex: 1 0 0;
+   flex-grow: 1;
+}

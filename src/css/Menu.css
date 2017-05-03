@@ -1,0 +1,14 @@
+.Menu-items {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+   align-items: flex-start;
+   background-color: var(--background-dark);
+   margin-left: 40px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   border: 1px dashed var(--logo);
+
+}

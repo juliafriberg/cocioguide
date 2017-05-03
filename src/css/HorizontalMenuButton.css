@@ -1,0 +1,31 @@
+.ActiveHorizontalLine {
+  border: 2px solid var(--highlight);
+  border-radius: 3px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 90%;
+}
+
+.Line-div {
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
+}
+
+.Menu-button-div {
+  -webkit-flex: 3 0 0;
+  flex: 3 0 0;
+}
+
+.Horizontal {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: calc(100% + 40px);
+  margin-left: -40px;
+}

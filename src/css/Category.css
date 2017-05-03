@@ -1,0 +1,14 @@
+.Category-div {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.Category-title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.Category-text {
+  text-align: left;
+  margin-bottom: 40px
+}

@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-logo {
+  height: 80px;
+  float: left;
+}
+
+.App-header {
+  height: 100px;
+  padding: 20px;
+  color: var(--logo);
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-header-links {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}

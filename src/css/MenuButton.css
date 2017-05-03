@@ -1,0 +1,6 @@
+.ActiveLine {
+  border: 2px solid var(--highlight);
+  width: 20%;
+  border-radius: 3px
+
+}
