@@ -1,46 +1,31 @@
 import React, { Component } from 'react';
 import {FlatButton} from 'material-ui';
-import {text} from '../colors.js';
+import {setSelectedCategory} from '../actions.js';
+import { connect } from 'react-redux';
 
 import '../css/HorizontalMenuButton.css';
 
-const activeTextStyle = {
-  "textAlign": "left",
-  "width": "100%",
-  "color": text,
-  "whiteSpace": "normal",
-  "fontStyle":"bold"
-}
-
-const normalTextStyle = {
-  "textAlign": "left",
-  "width": "100%",
-  "color": text,
-  "whiteSpace": "normal",
-}
+import {activeLabelStyle, normalLabelStyle, leftAlignedButtonStyle} from '../styles.js';
 
 class HorizontalMenuButton extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: this.props.title,
-      active: this.props.active,
-      index: this.props.index,
-
-    };
+    this.buttonClicked = this.buttonClicked.bind(this);
   }
 
-  componentWillReceiveProps(props) {
-    this.setState({active: props.active});
+  buttonClicked() {
+    console.log(this.props);
+    const { dispatch } = this.props
+    dispatch(setSelectedCategory(this.props.title))
   }
-
 
   render() {
+    const {selectedCategory} = this.props
     var activeLine = "";
-    var style = normalTextStyle;
-    if (this.state.active) {
+    var labelStyle = normalLabelStyle;
+    if (this.props.title === selectedCategory) {
       activeLine = <hr className="ActiveHorizontalLine"/>
-      style = activeTextStyle;
+      labelStyle = activeLabelStyle;
     }
 
     return (
@@ -49,7 +34,7 @@ class HorizontalMenuButton extends Component {
             {activeLine}
           </div>
           <div className="Menu-button-div">
-            <FlatButton  label={this.state.title} style={style} onTouchTap={() => this.props.setContent(this.state.index)}/>
+            <FlatButton  label={this.props.title} style={leftAlignedButtonStyle} labelStyle={labelStyle} onTouchTap={this.buttonClicked}/>
           </div>
         </div>
     );
@@ -57,4 +42,20 @@ class HorizontalMenuButton extends Component {
 
 }
 
-export default HorizontalMenuButton;
+function mapStateToProps(state) {
+  const { allData } = state
+
+  const {
+    isFetching
+  } = allData
+
+  const selectedCategory = isFetching ? "" : state['selectedCategory']['selectedCategory']
+
+  return {
+    isFetching,
+    selectedCategory
+  }
+}
+
+
+export default connect(mapStateToProps)(HorizontalMenuButton)

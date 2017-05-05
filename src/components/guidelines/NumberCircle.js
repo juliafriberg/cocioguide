@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import {Avatar} from 'material-ui';
 
-
-import '../../css/NumberCircle.css';
-
 import {
   text,
   highlight,
@@ -25,7 +22,6 @@ class NumberCircle extends Component {
 
   render() {
 
-    console.log(highlight);
     return (
         <div>
         <Avatar

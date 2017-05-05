@@ -1,34 +1,23 @@
+
 import React, { Component } from 'react';
 
 import '../../css/CommentComponent.css';
 
 class CommentComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      author: this.props.author,
-      text: this.props.text,
-      date: this.props.date,
-      company: this.props.company,
-      worktitle: this.props.worktitle
-    };
-
-  }
-
-  componentWillMount() {
-  }
-
+  
   render() {
+
+    var date = new Date(this.props.date)
     return (
         <div className="Comment-div">
           <div className="Comment-header">
             <div className="Comment-author-div">
-              <p className="Comment-author">{this.state.author}</p>
-              <p className="Comment-worktitle">{this.state.worktitle} at {this.state.company}</p>
+              <p className="Comment-author">{this.props.author['name']}</p>
+              <p className="Comment-worktitle">{this.props.author['worktitle']} at {this.props.author['company']}</p>
             </div>
-            <p className="Comment-date">{this.state.date.toLocaleDateString()} &nbsp; {this.state.date.getHours()}:{this.state.date.getMinutes()}</p>
+            <p className="Comment-date">{date.toLocaleDateString()} &nbsp; {date.getHours()}:{date.getMinutes()} </p>
           </div>
-          <p className="Comment-text">{this.state.text}</p>
+          <p className="Comment-text">{this.props.text}</p>
         </div>
     );
   }

@@ -3,6 +3,9 @@ import Contact from "./Contact.js";
 import About from "./About.js";
 import Guide from "./guidelines/Guide.js";
 import MenuButton from "./MenuButton.js";
+import {initializeDatabase} from "../dataRetriever.js";
+import {fetchData} from '../actions.js';
+import { connect } from 'react-redux';
 
 import '../css/App.css';
 
@@ -11,8 +14,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      menuItems: [{title: "Guide", content: <Guide />, active: true},
-                  {title: "About", content: <About />, active: false},
+      menuItems: [{title: "About", content: <About />, active: true},
+                  {title: "Guide", content: <Guide />, active: false},
                   {title: "Contact", content: <Contact />, active: false}],
       content: "",
     };
@@ -20,8 +23,18 @@ class App extends Component {
     this.setContent = this.setContent.bind(this);
   }
 
+  componentDidMount() {
+    const { dispatch } = this.props
+    dispatch(fetchData())
+  }
+
+  componentDidUpdate(prevProps) {
+
+  }
+
   componentWillMount() {
     this.setState({'content': this.state.menuItems[0].content});
+    initializeDatabase()
   }
 
   setContent(index) {
@@ -39,7 +52,10 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2 className="App-logo">COCO Guide</h2>
+          <div className="App-logo">
+            <img src="/img/Logo.png" />
+
+          </div>
           <div className="App-header-links">
             {buttons}
           </div>
@@ -51,4 +67,9 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return(state)
+}
+
+
+export default connect(mapStateToProps)(App)

@@ -3,13 +3,7 @@ import {FlatButton} from 'material-ui';
 
 import '../css/MenuButton.css';
 
-const activeTextStyle = {
-  "fontStyle":"bold"
-}
-
-const normalTextStyle = {
-  
-}
+import {normalLabelStyle, activeLabelStyle} from '../styles.js';
 
 class MenuButton extends Component {
   constructor(props) {
@@ -29,15 +23,15 @@ class MenuButton extends Component {
 
   render() {
     var activeLine = "";
-    var style = normalTextStyle;
+    var style = normalLabelStyle;
     if (this.state.active) {
       activeLine = <hr className="ActiveLine"/>
-      style = activeTextStyle;
+      style = activeLabelStyle;
     }
 
     return (
         <div>
-          <FlatButton label={this.state.title} style={style} onTouchTap={() => this.props.setContent(this.state.index)}/>
+          <FlatButton label={this.state.title} labelStyle={style} onTouchTap={() => this.props.setContent(this.state.index)}/>
           {activeLine}
         </div>
     );

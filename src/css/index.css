@@ -1,21 +1,25 @@
 :root {
-  --background-dark: #454442;
-  --background-light: #4F4F4D;
+  --background-dark: #454542;
+  --background-light: #50504E;
   --highlight: #FF45B7;
   --text: #EEF1F2;
   --actions: #FF9300;
   --logo: #AB926E;
+  --border-color: #8A8A8A;
+  --hint-color: #868686;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-family: 'Exo', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--text);
 }
 
 p {
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 html {
@@ -26,13 +30,12 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
+  background-size: cover;
+  background-image: url("../../public/img/background.png");
   background-color: var(--background-dark);
+  background-repeat: no-repeat;
 }
 
 #root {
   min-height: 100%;
-}
-
-h {
-  font-family: Exo, sans-serif;
 }
