@@ -24,9 +24,6 @@ class Guideline extends Component {
     }
   }
 
-  componentWillMount() {
-  }
-
 
   handleComment = () => {
     addNewComment(this.props.number, {name: this.state.comment.author, worktitle: this.state.comment.worktitle, company: this.state.comment.company}, this.state.comment.text)
@@ -47,16 +44,16 @@ class Guideline extends Component {
   handleChange = (event) => {
       this.setState({
         comment: Object.assign({}, this.state.comment,
-          { [event.target.name]: event.target.value.trim() })});
+          { [event.target.name]: event.target.value })});
 
 
   };
 
   commentIsValid = () => {
-    return this.state.comment.text.length>0 &&
-      this.state.comment.author.length>0 &&
-      this.state.comment.worktitle.length>0 &&
-      this.state.comment.company.length>0
+    return this.state.comment.text.trim().length>0 &&
+      this.state.comment.author.trim().length>0 &&
+      this.state.comment.worktitle.trim().length>0 &&
+      this.state.comment.company.trim().length>0
   }
 
 

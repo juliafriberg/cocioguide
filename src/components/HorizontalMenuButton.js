@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 
 import '../css/HorizontalMenuButton.css';
 
-import {activeLabelStyle, normalLabelStyle, leftAlignedButtonStyle} from '../styles.js';
-
 class HorizontalMenuButton extends Component {
   constructor(props) {
     super(props);
@@ -22,10 +20,10 @@ class HorizontalMenuButton extends Component {
   render() {
     const {selectedCategory} = this.props
     var activeLine = "";
-    var labelStyle = normalLabelStyle;
+    var menuButtonStyle = "Normal-menu-button";
     if (this.props.title === selectedCategory) {
       activeLine = <hr className="ActiveHorizontalLine"/>
-      labelStyle = activeLabelStyle;
+      menuButtonStyle = "Active-menu-button";
     }
 
     return (
@@ -33,8 +31,8 @@ class HorizontalMenuButton extends Component {
           <div className="Line-div">
             {activeLine}
           </div>
-          <div className="Menu-button-div">
-            <FlatButton  label={this.props.title} style={leftAlignedButtonStyle} labelStyle={labelStyle} onTouchTap={this.buttonClicked}/>
+          <div className="Menu-button-div" onTouchTap={this.buttonClicked}>
+            <p className={menuButtonStyle}> {this.props.title} </p>
           </div>
         </div>
     );

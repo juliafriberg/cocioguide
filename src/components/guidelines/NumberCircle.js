@@ -11,9 +11,6 @@ const style = {margin: 5};
 class NumberCircle extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      number: this.props.number
-    };
 
   }
 
@@ -30,7 +27,7 @@ class NumberCircle extends Component {
           size={40}
           style={style}
         >
-          #{this.state.number}
+          #{this.props.number}
         </Avatar>
         </div>
     );

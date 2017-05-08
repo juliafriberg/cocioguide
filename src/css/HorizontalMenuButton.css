@@ -11,9 +11,34 @@
   flex: 1 0 0;
 }
 
+.NormalHorizontalLine {
+  border: 0px solid var(--highlight);
+}
+
 .Menu-button-div {
   -webkit-flex: 3 0 0;
   flex: 3 0 0;
+  text-align: left;
+  margin-left: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.Menu-button-div:hover{
+  background-color: var(--background-light);
+}
+
+
+.Normal-menu-button {
+  font-family: 'Exo', sans-serif;
+  font-weight: 300;
+  padding-top: 0px;
+}
+
+.Active-menu-button {
+  font-family: 'Exo', sans-serif;
+  color: white;
+  font-weight: 600;
 }
 
 .Horizontal {

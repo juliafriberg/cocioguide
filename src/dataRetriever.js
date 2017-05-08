@@ -1,4 +1,5 @@
 var firebase = require('firebase');
+import _ from 'underscore'
 
 
   export function initializeDatabase() {
@@ -18,9 +19,9 @@ var firebase = require('firebase');
 
   export function getGuidelinesForCategory(data, selectedCategory) {
     var guidelines = data['guidelines']
-    var guidelineKeys = data['categories'][selectedCategory]
+    var guidelineKeys = data['categories'][selectedCategory]['guidelines']
     var comments = data['comments']
-    return Object.keys(guidelineKeys).map(function(key) {
+    var allGuidelines = Object.keys(guidelineKeys).map(function(key) {
       var guideline = guidelines[key]
       var commentsForGuideline = comments[guideline['number']]
 
@@ -30,10 +31,12 @@ var firebase = require('firebase');
 
       guideline['comments']= commentsArray
 
-
-
       return guideline
     })
+
+    allGuidelines.sort(function(a,b) {return (a.votes > b.votes) ? -1 : ((b.votes > a.votes) ? 1 : 0);} );
+
+    return allGuidelines;
 
   }
 
