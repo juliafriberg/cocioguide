@@ -33,7 +33,6 @@ export function setSelectedCategory(category) {
 }
 
 export function setInitialCategory(category) {
-  console.log(category);
   return {
     type: SET_INITIAL_CATEGORY,
     category: category

@@ -46,8 +46,6 @@ function selectedCategory(state = {}, action) {
           selectedCategory: action.category
         })
     case SET_INITIAL_CATEGORY:
-      console.log("initial");
-      console.log(action.category);
       if(state['selectedCategory'] == null) {
         return Object.assign({}, state, {
             selectedCategory: action.category

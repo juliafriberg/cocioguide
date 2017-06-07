@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {FlatButton} from 'material-ui';
 import {setSelectedCategory} from '../actions.js';
 import { connect } from 'react-redux';
 
@@ -12,7 +11,6 @@ class HorizontalMenuButton extends Component {
   }
 
   buttonClicked() {
-    console.log(this.props);
     const { dispatch } = this.props
     dispatch(setSelectedCategory(this.props.title))
   }

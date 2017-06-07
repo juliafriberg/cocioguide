@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import julia from '../img/julia.jpg';
+import therese from '../img/therese.png';
 
 import '../css/Contact.css'
 
@@ -13,12 +15,12 @@ class Contact extends Component {
         </h1>
         <div className="Persons-div">
           <div className="Person-div">
-            <img className="Circular-image" src="/img/julia.jpg"/>
+            <img className="Circular-image" src={julia} alt="Julia"/>
             <h3>Julia Friberg</h3>
             <p>julia.friberg@varvet.com</p>
           </div>
           <div className="Person-div">
-            <img className="Circular-image" src="/img/therese.png"/>
+            <img className="Circular-image" src={therese} alt="Therese"/>
             <h3>Therese Johansson</h3>
             <p>therese@varvet.com</p>
           </div>

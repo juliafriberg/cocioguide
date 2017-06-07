@@ -3,8 +3,6 @@ import Category from './Category.js'
 import Menu from "./Menu.js";
 import '../../css/Guide.css';
 
-import {setSelectedCategory} from '../../actions.js';
-import { connect } from 'react-redux';
 
 class Guide extends Component {
 

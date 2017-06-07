@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import Category from "./Category";
 import HorizontalMenuButton from '../HorizontalMenuButton.js';
 import { connect } from 'react-redux';
-import {setSelectedCategory} from '../../dataRetriever.js'
 
 import '../../css/Menu.css';
 

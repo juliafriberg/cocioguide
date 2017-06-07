@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Guideline from './Guideline.js';
 import { connect } from 'react-redux';
-import {fetchGuidelines} from '../../actions.js'
 import {getGuidelinesForCategory} from '../../dataRetriever.js'
 
 import '../../css/Category.css';
@@ -11,7 +10,7 @@ class Category extends Component {
   render() {
     const {guidelines, isFetching, selectedCategory, categoryText} = this.props
 
-    var guidelineComponents = guidelines.map((guideline, index) => 
+    var guidelineComponents = guidelines.map((guideline, index) =>
       <Guideline
         key={index}
         title={guideline.title}

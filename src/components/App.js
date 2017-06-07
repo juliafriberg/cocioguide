@@ -6,6 +6,8 @@ import MenuButton from "./MenuButton.js";
 import {initializeDatabase} from "../dataRetriever.js";
 import {fetchData} from '../actions.js';
 import { connect } from 'react-redux';
+import logo from '../img/Logo.png';
+import backgroundImage from '../img/background.png';
 
 import '../css/App.css';
 
@@ -49,11 +51,14 @@ class App extends Component {
   render() {
     var buttons = this.state.menuItems.map((item, index) =>
       <MenuButton key={index} title={item.title} setContent={this.setContent} active={item.active} index={index}/>)
+
+      document.body.style.backgroundImage = 'url('+backgroundImage+')';
+
     return (
       <div className="App">
         <div className="App-header">
           <div className="App-logo">
-            <img src="/img/Logo.png" />
+            <img src={logo} alt="Logo"/>
 
           </div>
           <div className="App-header-links">

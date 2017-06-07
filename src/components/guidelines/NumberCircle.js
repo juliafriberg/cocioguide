@@ -9,13 +9,6 @@ import {
 const style = {margin: 5};
 
 class NumberCircle extends Component {
-  constructor(props) {
-    super(props);
-
-  }
-
-  componentWillMount() {
-  }
 
   render() {
 

@@ -46,7 +46,7 @@ export function addNewComment(guidelineKey, author, text) {
   var commentData = {
     author: author,
     text: text,
-    date: (new Date).getTime()
+    date: new Date.getTime()
   };
 
   // Get a key for a new comment.
@@ -62,7 +62,7 @@ export function addNewComment(guidelineKey, author, text) {
 export function changeVotes(guidelineKey, votes) {
 
   var updates = {};
-  updates['/guidelines/' + guidelineKey + "/" + 'votes'] = votes;
+  updates['/guidelines/' + guidelineKey + '/votes'] = votes;
 
   return firebase.database().ref().update(updates);
 }
