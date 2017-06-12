@@ -13,3 +13,96 @@
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
+.Persons-div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-bottom: 40px;
+
+}
+
+.Person-div {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 40px;
+}
+
+.Circular-image {
+  border-radius: 50%;
+  height: 150px;
+  max-width: 150px;
+}
+
+.Logo-div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.Logo-image {
+  max-width: 200px;
+  align-self: center;
+  margin: 20px;
+}
+
+.Logo-divider {
+  width: 20%;
+  text-align: center;
+  border: 1px dashed var(--border-color);
+}
+
+@media all and (max-width: 860px) {
+
+  .About-div {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .Logo-div {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .Logo-divider {
+    width: 50%;
+  }
+}
+
+ @media all and (max-width: 640px) {
+   .About-div {
+     padding-left: 10px;
+     padding-right: 10px;
+     padding-bottom: 10px;
+     margin-left: 20px;
+     margin-right: 20px;
+     margin-bottom: 20px;
+   }
+
+   .About-text {
+     text-align: left;
+     margin-top: 10px;
+     margin-bottom: 10px;
+   }
+
+   .Persons-div {
+       flex-direction: column;
+       -webkit-flex-direction: column;
+   }
+
+   .Person-div {
+     margin-left: 10px;
+     margin-right: 10px;
+     margin-top: 10px;
+   }
+ }

@@ -10,6 +10,8 @@ export const RECEIVE_DATA = 'RECEIVE_DATA'
 export const SET_SELECTED_CATEGORY = 'SET_SELECTED_CATEGORY'
 export const SET_INITIAL_CATEGORY = 'SET_INITIAL_CATEGORY'
 
+export const SET_SELECTED_PAGE = 'SET_SELECTED_PAGE'
+
 /*
  * action creators
  */
@@ -36,6 +38,13 @@ export function setInitialCategory(category) {
   return {
     type: SET_INITIAL_CATEGORY,
     category: category
+  }
+}
+
+export function setSelectedPage(page) {
+  return {
+    type: SET_SELECTED_PAGE,
+    page: page
   }
 }
 

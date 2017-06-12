@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import {setSelectedCategory} from '../actions.js';
 import { connect } from 'react-redux';
+import {setSelectedCategory} from '../actions.js';
+import {setSelectedPage} from '../actions.js';
 
 import '../css/HorizontalMenuButton.css';
 
 class HorizontalMenuButton extends Component {
+
   constructor(props) {
-    super(props);
+    super(props)
     this.buttonClicked = this.buttonClicked.bind(this);
   }
 
   buttonClicked() {
     const { dispatch } = this.props
     dispatch(setSelectedCategory(this.props.title))
+    dispatch(setSelectedPage("Guide"))
   }
 
   render() {
     const {selectedCategory} = this.props
     var activeLine = "";
     var menuButtonStyle = "Normal-menu-button";
-    if (this.props.title === selectedCategory) {
+    if (this.props.title === selectedCategory && this.props.selectedPage === "Guide") {
       activeLine = <hr className="ActiveHorizontalLine"/>
       menuButtonStyle = "Active-menu-button";
     }
@@ -46,10 +49,12 @@ function mapStateToProps(state) {
   } = allData
 
   const selectedCategory = isFetching ? "" : state['selectedCategory']['selectedCategory']
+  const selectedPage = state['selectedPage']['selectedPage']
 
   return {
     isFetching,
-    selectedCategory
+    selectedCategory,
+    selectedPage
   }
 }
 

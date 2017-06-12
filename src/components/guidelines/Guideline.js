@@ -18,8 +18,8 @@ class Guideline extends Component {
       comment: {
         author: "",
         worktitle: "",
-        company:"",
-        text:"",
+        company: "",
+        text: "",
       }
     }
   }
@@ -99,6 +99,10 @@ class Guideline extends Component {
             <div className="Guideline-text">
               <p>{this.props.text}</p>
 
+            </div>
+            <div className="Guideline-comment-mobile">
+              <FontIcon className="material-icons" style={{"marginRight":"5px"}}>comment</FontIcon>
+              <p>{this.props.comments.length}</p>
             </div>
           </CardText>
 

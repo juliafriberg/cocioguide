@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HorizontalMenuButton from '../HorizontalMenuButton.js';
+
 import { connect } from 'react-redux';
 
 import '../../css/Menu.css';
@@ -11,9 +12,8 @@ class Menu extends Component {
      const {categories} = this.props
 
     var menuItems = categories.map((item, index) =>
-      <HorizontalMenuButton key={index} title={item}/>
+      <HorizontalMenuButton key={index} title={item} />
     )
-
 
     return (
         <div>
@@ -23,8 +23,6 @@ class Menu extends Component {
         </div>
     );
   }
-
-
 }
 
 function mapStateToProps(state) {
@@ -35,12 +33,9 @@ function mapStateToProps(state) {
     items: data
   } = allData
   var categories = []
-
-  if(!isFetching) {
+  if(isFetching !== undefined && !isFetching) {
     categories = Object.keys(data['categories'])
   }
-
-
 
   return {
     categories,

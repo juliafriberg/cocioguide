@@ -3,7 +3,8 @@ import {
   REQUEST_DATA,
   RECEIVE_DATA,
   SET_SELECTED_CATEGORY,
-  SET_INITIAL_CATEGORY
+  SET_INITIAL_CATEGORY,
+  SET_SELECTED_PAGE
 } from './actions.js'
 
 
@@ -58,8 +59,23 @@ function selectedCategory(state = {}, action) {
   }
 }
 
+
+function selectedPage(state = {
+  selectedPage: "About"
+}, action) {
+  switch (action.type) {
+    case SET_SELECTED_PAGE:
+      return Object.assign({}, state, {
+          selectedPage: action.page
+        })
+    default:
+      return state
+  }
+}
+
+
 const rootReducer = combineReducers({
-  allData, selectedCategory
+  allData, selectedCategory, selectedPage
 })
 
 export default rootReducer

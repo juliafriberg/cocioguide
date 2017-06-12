@@ -12,7 +12,7 @@
   flex-direction: row;
   -webkit-align-items: center;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
 }
 
 .Guideline-title {
@@ -51,7 +51,7 @@
   justify-content: flex-end;
   -webkit-align-items: center;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
 }
 
 .Card {
@@ -111,4 +111,49 @@
   justify-content: flex-end;
   margin-top: 20px;
   padding-bottom: 40px;
+}
+
+.Guideline-comment-mobile {
+  display: none;
+}
+
+
+@media all and (max-width: 640px) {
+
+
+  .Guideline-header {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .Guideline-comment {
+    display: none;
+  }
+
+  .Guideline-comment-mobile {
+    display: inline;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+     margin-left: 20px;
+
+  }
+
+  .Guideline-text {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .Guideline-title {
+    margin-left: 5px;
+  }
+
+
 }

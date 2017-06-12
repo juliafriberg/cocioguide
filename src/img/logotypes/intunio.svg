@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="410px" height="96px" viewBox="0 0 410 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Name</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Name" fill="#FFFFFF">
+            <polygon id="Rectangle-17-Copy-4" points="120 0 110 0 110 95 120 95 120 35 135 35 135 25 120 25"></polygon>
+            <rect id="Rectangle-17-Copy-5" x="310" y="25" width="10" height="70"></rect>
+            <rect id="Rectangle-18-Copy-24" x="310" y="0" width="10" height="10"></rect>
+            <path d="M375,86 L375,86 C388.553735,86 400,74.3885101 400,60 C400,45.6114899 388.553735,34 375,34 C360.446265,34 349,45.6114899 349,60 C349,74.3885101 360.446265,86 375,86 L375,86 L375,86 Z M339,60 C339,40.117749 354.893891,24 375,24 C394.106109,24 410,40.117749 410,60 C410,79.882251 394.106109,96 375,96 C354.893891,96 339,79.882251 339,60 Z" id="Shape" fill-rule="nonzero"></path>
+            <rect id="Rectangle-17-Copy-42" x="0" y="25" width="10" height="70"></rect>
+            <path d="M40,95 L40,54 C40,41 45,34 60,34 C75,34 80,42 80,54 L80,95 L90,95 L90,54 C90,37 82,24 60,24 C51.1120805,24 44.5091436,26.192189 40,30 L32.6798165,26.3399082 C31.1997947,25.5998973 30,26.3358366 30,28.0078125 L30,95" id="Rectangle-17-Copy-51"></path>
+            <path d="M240,95 L240,54 C240,41 245,34 260,34 C275,34 280,42 280,54 L280,95 L290,95 L290,54 C290,37 282,24 260,24 C251.112081,24 244.509144,26.192189 240,30 L232.679816,26.3399082 C231.199795,25.5998973 230,26.3358366 230,28.0078125 L230,95" id="Rectangle-17-Copy-54"></path>
+            <path d="M160,96 L160,55 C160,42 165,35 180,35 C195,35 200,43 200,55 L200,96 L210,96 L210,55 C210,38 202,25 180,25 C171.112081,25 164.509144,27.192189 160,31 L152.679816,27.3399082 C151.199795,26.5998973 150,27.3358366 150,29.0078125 L150,96" id="Rectangle-17-Copy-55" transform="translate(180.000000, 60.500000) rotate(-180.000000) translate(-180.000000, -60.500000) "></path>
+            <rect id="Rectangle-18-Copy-25" x="0" y="0" width="10" height="10"></rect>
+        </g>
+    </g>
+</svg>

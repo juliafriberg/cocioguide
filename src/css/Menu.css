@@ -10,5 +10,11 @@
    padding-top: 20px;
    padding-bottom: 20px;
    border: 1px dashed var(--border-color);
+}
+
+@media all and (max-width: 860px) {
+  .Menu-items {
+    border: none;
+  }
 
 }

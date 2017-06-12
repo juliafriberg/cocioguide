@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Contact from "./Contact.js";
 import About from "./About.js";
 import Guide from "./guidelines/Guide.js";
 import MenuButton from "./MenuButton.js";
@@ -8,6 +7,10 @@ import {fetchData} from '../actions.js';
 import { connect } from 'react-redux';
 import logo from '../img/Logo.png';
 import backgroundImage from '../img/background.png';
+import Drawer from 'material-ui/Drawer';
+import IconButton from 'material-ui/IconButton';
+import Menu from "./guidelines/Menu.js";
+import MenuIcon from 'material-ui/svg-icons/navigation/menu';
 
 import '../css/App.css';
 
@@ -16,13 +19,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      menuItems: [{title: "About", content: <About />, active: true},
-                  {title: "Guide", content: <Guide />, active: false},
-                  {title: "Contact", content: <Contact />, active: false}],
+      menuItems: {
+        About: {title: "About", content: <About />, active: true},
+        Guide: {title: "Guide", content: <Guide />, active: false}
+      },
       content: "",
+      open: false
     };
 
-    this.setContent = this.setContent.bind(this);
   }
 
   componentDidMount() {
@@ -30,51 +34,82 @@ class App extends Component {
     dispatch(fetchData())
   }
 
-  componentDidUpdate(prevProps) {
-
-  }
-
   componentWillMount() {
-    this.setState({'content': this.state.menuItems[0].content});
     initializeDatabase()
   }
 
-  setContent(index) {
-    for (var itemIndex in this.state.menuItems) {
-      this.state.menuItems[itemIndex].active = itemIndex == index ? true : false;
-    }
-
-    this.setState({"content": this.state.menuItems[index].content});
-
-  }
+  handleToggle = () => this.setState({open: !this.state.open});
 
   render() {
-    var buttons = this.state.menuItems.map((item, index) =>
-      <MenuButton key={index} title={item.title} setContent={this.setContent} active={item.active} index={index}/>)
+    var buttons = Object.keys(this.state.menuItems).map((key, index) =>
+      <MenuButton key={index} title={this.state.menuItems[key].title} />)
 
-      document.body.style.backgroundImage = 'url('+backgroundImage+')';
+
+    document.body.style.backgroundImage = 'url('+backgroundImage+')';
+
+    var large = {
+      width: 96,
+      height: 96,
+      padding: 24,
+    }
+    var largeIcon = {
+      width: 48,
+      height: 48,
+    }
 
     return (
+
+
+
       <div className="App">
         <div className="App-header">
-          <div className="App-logo">
-            <img src={logo} alt="Logo"/>
 
+          <div className="Mobile-menu">
+
+            <IconButton
+              onTouchTap={this.handleToggle}
+              style={large}
+              iconStyle={largeIcon}>
+
+              <MenuIcon />
+            </IconButton>
+
+            <Drawer
+              open={this.state.open}
+              docked={false}
+              onRequestChange={(open) => this.setState({"open": open})}>
+              <div className="Top-level-menu-buttons">
+                {buttons}
+              </div>
+              <Menu />
+              </Drawer>
+            </div>
+
+          <div>
+            <img className="App-logo-image" src={logo} alt="Logo"/>
           </div>
-          <div className="App-header-links">
+
+
+          <div className="Web-menu">
             {buttons}
           </div>
-        </div>
-            {this.state.content}
 
+
+        </div>
+            {this.state.menuItems[this.props.selectedPage].content}
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return(state)
-}
 
+  const selectedPage = state['selectedPage']['selectedPage']
+
+
+  return {
+    selectedPage
+  }
+}
 
 export default connect(mapStateToProps)(App)
