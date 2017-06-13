@@ -18,6 +18,7 @@ class Category extends Component {
         number={guideline.number}
         votes={guideline.votes}
         comments={guideline.comments}
+        author={guideline.author}
       />)
 
     return (

@@ -30,11 +30,15 @@ class Guideline extends Component {
                   <p className="Guideline-comment-text">{this.props.comments.length}</p>
                 </div>
               </div>
+
           </CardHeader>
 
           <CardText style={{"padding":"0px"}}>
             <div className="Guideline-text">
               <p>{this.props.text}</p>
+            </div>
+            <div className="Guideline-author">
+              {this.props.author.map((author, index) => <p className="Author-p" key={index}>{author.name}, {author.worktitle} at {author.company}</p>)}
             </div>
 
           </CardText>
