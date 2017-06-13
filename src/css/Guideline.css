@@ -12,13 +12,12 @@
   flex-direction: row;
   -webkit-align-items: center;
   align-items: center;
-  max-width: 100%;
+  flex-grow: 1;
 }
 
 .Guideline-title {
   margin-left: 15px;
 }
-
 
 .Guideline-comment {
   display: -webkit-flex;
@@ -27,7 +26,9 @@
   justify-content: flex-end;
   -webkit-align-items: center;
   align-items: center;
-  width: 100%;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
+  flex-grow: 1;
 }
 
 .Guideline-comments-outer {
@@ -39,19 +40,7 @@
   margin: auto;
   text-align: left;
   margin-bottom: 40px;
-  max-width: 92%
-}
-
-
-
-.Vote-div {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  -webkit-align-items: center;
-  align-items: center;
-  max-width: 100%;
+  max-width: 92%;
 }
 
 .Card {
@@ -72,46 +61,6 @@
   border: 1px dashed var(--border-color);
 }
 
-.Add-comment {
-  margin-top: 40px;
-  font-style: italic;
-}
-
-.Add-comment-header {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  margin-bottom: 5px;
-
-}
-
-.Add-comment-name-label {
-  margin-right: 10px;
-  white-space: nowrap;
-}
-
-.Add-comment-title-label {
-  margin-right: 10px;
-  margin-left: 10px;
-  white-space: nowrap;
-
-}
-
-.Add-comment-company-label {
-  margin-left: 10px;
-}
-
-.Button-div {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  margin-top: 20px;
-  padding-bottom: 40px;
-}
 
 .Guideline-comment-mobile {
   display: none;
@@ -124,7 +73,7 @@
   .Guideline-header {
     -webkit-flex-direction: column;
     flex-direction: column;
-    max-width: 100%;
+
   }
 
   .Guideline-comment {
@@ -141,19 +90,38 @@
     align-items: center;
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
-     margin-left: 20px;
+     margin-left: 10px;
 
   }
 
   .Guideline-text {
-    text-align: left;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .Guideline-title {
     margin-left: 5px;
+    font-size: 1em;
   }
 
+  .Card-div {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    max-width: 400px;
+  }
+
+  .Card {
+    order: 0;
+  }
+
+  .Vote-component {
+    order: 1;
+  }
 
 }

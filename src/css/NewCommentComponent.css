@@ -1,0 +1,53 @@
+.Add-comment {
+  margin-top: 40px;
+  font-style: italic;
+}
+
+.Add-comment-header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+.Add-comment-name-label {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.Add-comment-title-label {
+  margin-right: 10px;
+  margin-left: 10px;
+  white-space: nowrap;
+
+}
+
+.Add-comment-company-label {
+  margin-left: 10px;
+}
+
+.Button-div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+@media all and (max-width: 860px) {
+  .Add-comment-header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+
+  .Button-div {
+    padding-bottom: 10px;
+  }
+}

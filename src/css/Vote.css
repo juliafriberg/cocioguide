@@ -1,0 +1,27 @@
+.Vote-div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+@media all and (max-width: 640px) {
+  .upvote {
+    order: 0
+  }
+
+  .votenumber {
+    order: 1
+  }
+
+  .downvote {
+    order: 2
+  }
+
+  .Vote-div {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}

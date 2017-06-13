@@ -46,7 +46,7 @@ export function addNewComment(guidelineKey, author, text) {
   var commentData = {
     author: author,
     text: text,
-    date: new Date.getTime()
+    date: (new Date()).getTime()
   };
 
   // Get a key for a new comment.

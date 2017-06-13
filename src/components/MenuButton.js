@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {FlatButton} from 'material-ui';
 import { connect } from 'react-redux';
 import {setSelectedPage} from '../actions.js';
 
