@@ -19,7 +19,7 @@
 
   .Category-div {
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 0px;
     padding-bottom: 10px;
   }
 
@@ -32,6 +32,7 @@
      text-align: center;
      margin-bottom: 10px;
      font-size: 0.9em;
+     margin-right: 10px;
    }
 
    .Category-title {
@@ -39,5 +40,6 @@
      margin-bottom: 10px;
      font-size: 1.5em;
    }
+
 
  }

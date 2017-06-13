@@ -69,14 +69,18 @@
   .Guideline-header {
     -webkit-flex-direction: column;
     flex-direction: column;
-    margin-top: -10px;
+    margin-top: 0px;
   }
 
   .Guideline-comment {
     order: 1;
     width: 100%;
     margin-bottom: 5px;
+  }
 
+  .Guideline-comment-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .Guideline-text {
@@ -116,7 +120,7 @@
     order: 0;
     text-align: left;
     width: 100%;
-    margin-top: -35px;
+    margin-top: -40px;
     margin-left: -70px;
 
   }

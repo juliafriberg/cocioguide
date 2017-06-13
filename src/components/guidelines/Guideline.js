@@ -27,7 +27,7 @@ class Guideline extends Component {
                 <h3 className="Guideline-title">{this.props.title}</h3>
                 <div className="Guideline-comment">
                   <FontIcon className="material-icons" style={{"marginRight":"5px"}}>comment</FontIcon>
-                  <p>{this.props.comments.length}</p>
+                  <p className="Guideline-comment-text">{this.props.comments.length}</p>
                 </div>
               </div>
           </CardHeader>
@@ -36,7 +36,7 @@ class Guideline extends Component {
             <div className="Guideline-text">
               <p>{this.props.text}</p>
             </div>
-            
+
           </CardText>
 
           <CardActions expandable={true} style={{"padding":"0px", "marginRight":"0px"}}>
