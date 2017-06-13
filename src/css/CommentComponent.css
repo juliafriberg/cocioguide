@@ -56,3 +56,33 @@
   flex-direction: column;
   width: 100%;
 }
+
+@media all and (max-width: 860px) {
+  .Comment-header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .Comment-author-div {
+    order: 1;
+  }
+
+  .Comment-date {
+    order: 0;
+
+  }
+
+  .Comment-author {
+    margin-top: 0px;
+  }
+
+  .Comment-div {
+    font-size: 0.8em;
+  }
+
+}

@@ -48,6 +48,27 @@
   }
 
   .Button-div {
-    padding-bottom: 10px;
+    padding-bottom: 0px;
+    margin-bottom: -10px;
   }
+
+  .Add-comment {
+    margin-top: 0px;
+    font-size: 0.8em;
+  }
+
+  .Add-comment-name-label {
+    margin-right: 0px;
+  }
+
+  .Add-comment-title-label {
+    margin-right: 0px;
+    margin-left: 0px;
+
+  }
+
+  .Add-comment-company-label {
+    margin-left: 0px;
+  }
+
 }

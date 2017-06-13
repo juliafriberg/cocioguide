@@ -23,5 +23,6 @@
   .Vote-div {
     -webkit-flex-direction: column;
     flex-direction: column;
+    margin-left: 5px;
   }
 }

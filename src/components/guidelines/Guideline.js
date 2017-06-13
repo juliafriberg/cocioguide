@@ -12,15 +12,18 @@ class Guideline extends Component {
   render() {
     return (
       <div className="Card-div">
-
-        <Vote className="Vote-component" number={this.props.number} votes={this.props.votes} />
+        <div className="Vote-component">
+          <Vote number={this.props.number} votes={this.props.votes} />
+        </div>
 
         <Card className="Card">
 
           <CardHeader
             actAsExpander={true} style={{"paddingTop":"0px", "paddingBottom":"0px", "whiteSpace":"wrap"}}>
               <div className="Guideline-header">
-                <NumberCircle number={this.props.number}/>
+                <div className="Number-div">
+                  <NumberCircle number={this.props.number} />
+                </div>
                 <h3 className="Guideline-title">{this.props.title}</h3>
                 <div className="Guideline-comment">
                   <FontIcon className="material-icons" style={{"marginRight":"5px"}}>comment</FontIcon>
@@ -33,10 +36,7 @@ class Guideline extends Component {
             <div className="Guideline-text">
               <p>{this.props.text}</p>
             </div>
-            <div className="Guideline-comment-mobile">
-              <FontIcon className="material-icons" style={{"marginRight":"5px"}}>comment</FontIcon>
-              <p>{this.props.comments.length}</p>
-            </div>
+            
           </CardText>
 
           <CardActions expandable={true} style={{"padding":"0px", "marginRight":"0px"}}>
