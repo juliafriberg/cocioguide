@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Guideline from './Guideline.js';
 import { connect } from 'react-redux';
-import {getGuidelinesForCategory} from '../../dataRetriever.js'
+import {getGuidelinesForCategory} from '../../dataRetriever.js';
+import AddGuideline from './AddGuideline.js';
 
 import '../../css/Category.css';
 
@@ -23,9 +24,16 @@ class Category extends Component {
 
     return (
       <div className="Category-div">
-        <h1 className="Category-title">
-          {selectedCategory}
-        </h1>
+
+        <div className="Category-header">
+          <h1 className="Category-title">
+            {selectedCategory}
+          </h1>
+          <div className="Add-guideline">
+            <AddGuideline category={selectedCategory}/>
+          </div>
+        </div>
+
         <p className="Category-text"> {categoryText}</p>
           {isFetching && guidelines.length === 0 &&
           <h2>Loading...</h2>
