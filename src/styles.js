@@ -37,7 +37,7 @@ export const iconButtonStyle = {
 /* TextFields */
 
 export const textFieldStyle = {
-  "backgroundColor":backgroundLight,
+  "backgroundColor": backgroundLight,
   "paddingLeft": "5px",
 }
 
@@ -48,4 +48,9 @@ export const hintStyle = {
 
 export const inputStyle = {
   "fontWeight":"100"
+}
+
+export const discreteActionButtonStyle = {
+  "backgroundColor": backgroundLight,
+  "border": "1px solid " + actions 
 }

@@ -66,3 +66,27 @@ export function changeVotes(guidelineKey, votes) {
 
   return firebase.database().ref().update(updates);
 }
+
+export function addNewGuideline(guideline, category) {
+
+  //Add votes to guideline
+  guideline.votes = 0
+
+  //Find key and guideline number
+  var guidelineNumber = 0
+  firebase.database().ref().once("value", function(snapshot) {
+    guidelineNumber = snapshot.child("guidelines").numChildren() + 1;
+  });
+
+  guideline.number = guidelineNumber
+
+  console.log(guideline);
+
+
+  var updates = {};
+  updates['/guidelines/' + guidelineNumber] = guideline;
+  updates['/categories/' + category + '/guidelines/' + guidelineNumber] = "";
+  updates['/comments/' + guidelineNumber] = "";
+
+  return firebase.database().ref().update(updates);
+}

@@ -8,6 +8,14 @@
     background-image: linear-gradient(-180deg, var(--background-light) 0%, var(--background-dark) 86%);
 }
 
+.About-title {
+  margin-top: 40px;
+}
+
+.Partners-title {
+  margin-top: 60px;
+}
+
 .About-text {
   text-align: left;
   margin-top: 40px;
@@ -52,11 +60,6 @@
   margin: 20px;
 }
 
-.Logo-divider {
-  width: 20%;
-  text-align: center;
-  border: 1px dashed var(--border-color);
-}
 
 @media all and (max-width: 860px) {
 
@@ -73,13 +76,17 @@
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-
-  .Logo-divider {
-    width: 50%;
-  }
 }
 
  @media all and (max-width: 640px) {
+   .About-title {
+     margin-top: 20px;
+   }
+
+   .Partners-title {
+     margin-top: 20px;
+   }
+
    .About-div {
      padding-left: 20px;
      padding-right: 20px;

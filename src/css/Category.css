@@ -5,13 +5,9 @@
 }
 
 .Category-header {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-justify-content: center;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  position: relative;
   margin-top: 40px;
   margin-bottom: 20px;
   width: 100%;
@@ -23,9 +19,18 @@
 }
 
 .Category-title {
+  flex: 0 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 40px;
+}
+
+.Add-guideline {
+  flex: 0 0 auto;
+  margin-left: auto;
 }
 
 
@@ -51,9 +56,25 @@
    }
 
    .Category-header {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
      margin-top: 20px;
      margin-bottom: 10px;
-     font-size: 1.5em;
+     font-size: 1em;
+
+   }
+
+   .Category-title {
+     position: relative;
+     margin-top: 0px;
+     margin-bottom: 0px;
+     margin-right: 10px;
+   }
+
+   .Add-guideline {
+     margin-left: 0px;
+     margin-top: 10px;
    }
 
 

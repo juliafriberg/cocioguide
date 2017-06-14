@@ -17,7 +17,7 @@ class About extends Component {
     return (
 
       <div className="About-div">
-        <h1>
+        <h1 className="About-title">
           About
         </h1>
 
@@ -40,7 +40,8 @@ class About extends Component {
           </div>
         </div>
 
-        <hr className="Logo-divider"/>
+
+        <h1 className="Partners-title"> Partners </h1>
 
         <div className="Logo-div">
           <img className="Logo-image" src={creuna} alt="Creuna"/>
