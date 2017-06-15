@@ -21,19 +21,17 @@ class HorizontalMenuButton extends Component {
   render() {
     const {selectedCategory} = this.props
     var activeLine = "";
-    var menuButtonStyle = "Normal-menu-button";
     if (this.props.title === selectedCategory && this.props.selectedPage === "Guide") {
       activeLine = <hr className="ActiveHorizontalLine"/>
-      menuButtonStyle = "Active-menu-button";
     }
 
     return (
-        <div className="Horizontal">
+        <div className="Horizontal" onTouchTap={this.buttonClicked}>
           <div className="Line-div">
             {activeLine}
           </div>
-          <div className="Menu-button-div" onTouchTap={this.buttonClicked}>
-            <p className={menuButtonStyle}> {this.props.title} </p>
+          <div className="Menu-button-div">
+            <p className="Normal-menu-button"> {this.props.title} </p>
           </div>
         </div>
     );

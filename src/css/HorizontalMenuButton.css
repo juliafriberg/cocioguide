@@ -24,21 +24,22 @@
   cursor: pointer;
 }
 
-.Menu-button-div:hover{
-  background-color: var(--background-light);
+.Normal-menu-button:hover {
+  font-family: 'Exo', sans-serif;
+  color: white;
+  font-weight: 600;
+
 }
 
 
 .Normal-menu-button {
   font-family: 'Exo', sans-serif;
   font-weight: 300;
-  padding-top: 0px;
-}
-
-.Active-menu-button {
-  font-family: 'Exo', sans-serif;
-  color: white;
-  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
 }
 
 .Horizontal {

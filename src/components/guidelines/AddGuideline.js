@@ -24,7 +24,7 @@ class AddGuideline extends Component {
           text: "",
         },
         dialogOpen: false,
-        snackbarOpen: true,
+        snackbarOpen: false,
       }
     }
 
@@ -99,6 +99,13 @@ class AddGuideline extends Component {
         />,
       ];
 
+      const fullWidthStyle = {
+        width: '100%',
+        maxWidth: 'none',
+      }
+
+      var customStyle = window.innerWidth < 640 ? fullWidthStyle : {}
+
       return (
         <div>
 
@@ -112,92 +119,96 @@ class AddGuideline extends Component {
               add
           </FontIcon>}/>
 
-          <Dialog
-            title={"Add new guideline"}
-            actions={dialogActions}
-            modal={false}
-            open={this.state.dialogOpen}
-            onRequestClose={this.handleCloseDialog}
-            autoScrollBodyContent={true}
-          >
+          <div className="Dialog-div">
 
-          <p> Here you can add your own guideline in the category {this.props.category}. Keep it short and clear to help as many as possible! </p>
-          <p> Category: {this.props.category} </p>
-          <TextField
-            hintText="Title of the guideline"
-            hintStyle={hintStyle}
-            inputStyle={inputStyle}
-            name="title"
-            underlineShow={false}
-            style={textFieldStyle}
-            fullWidth={true}
-            value={this.state.guideline.title}
-            onChange={this.handleChange}
-          />
+            <Dialog
+              title={"Add new guideline"}
+              actions={dialogActions}
+              modal={false}
+              open={this.state.dialogOpen}
+              onRequestClose={this.handleCloseDialog}
+              autoScrollBodyContent={true}
+              contentStyle={customStyle}
+            >
 
-          <TextField
-            className="New-guideline-text"
-            hintText="Descriptive text"
-            hintStyle={hintStyle}
-            inputStyle={inputStyle}
-            name="text"
-            underlineShow={false}
-            style={textFieldStyle}
-            fullWidth={true}
-            multiLine={true}
-            rows={3}
-            value={this.state.guideline.text}
-            onChange={this.handleChange}
-          />
-
-
-          <div className="Add-comment-header">
-
-            <p className="Add-comment-name-label">I am </p>
-
+            <p> Here you can add your own guideline in the category {this.props.category}. Keep it short and clear to help as many as possible! </p>
+            <p> Category: {this.props.category} </p>
             <TextField
-              hintText="Name"
+              hintText="Title of the guideline"
               hintStyle={hintStyle}
               inputStyle={inputStyle}
-              name="author"
+              name="title"
               underlineShow={false}
               style={textFieldStyle}
               fullWidth={true}
-              value={this.state.guideline.author}
+              value={this.state.guideline.title}
               onChange={this.handleChange}
             />
 
-            <p className="Add-comment-title-label"> and I work as a</p>
-
             <TextField
-              hintText="Title"
+              className="New-guideline-text"
+              hintText="Descriptive text"
               hintStyle={hintStyle}
               inputStyle={inputStyle}
-              name="worktitle"
+              name="text"
               underlineShow={false}
               style={textFieldStyle}
               fullWidth={true}
-              value={this.state.guideline.worktitle}
+              multiLine={true}
+              rows={3}
+              value={this.state.guideline.text}
               onChange={this.handleChange}
             />
 
-            <p className="Add-comment-title-label"> at </p>
 
-            <TextField
-              hintText="Company"
-              hintStyle={hintStyle}
-              inputStyle={inputStyle}
-              name="company"
-              underlineShow={false}
-              style={textFieldStyle}
-              fullWidth={true}
-              value={this.state.guideline.company}
-              onChange={this.handleChange}
-            />
+            <div className="Add-comment-header">
 
+              <p className="Add-comment-name-label">I am </p>
+
+              <TextField
+                hintText="Name"
+                hintStyle={hintStyle}
+                inputStyle={inputStyle}
+                name="author"
+                underlineShow={false}
+                style={textFieldStyle}
+                fullWidth={true}
+                value={this.state.guideline.author}
+                onChange={this.handleChange}
+              />
+
+              <p className="Add-comment-title-label"> and I work as a</p>
+
+              <TextField
+                hintText="Title"
+                hintStyle={hintStyle}
+                inputStyle={inputStyle}
+                name="worktitle"
+                underlineShow={false}
+                style={textFieldStyle}
+                fullWidth={true}
+                value={this.state.guideline.worktitle}
+                onChange={this.handleChange}
+              />
+
+              <p className="Add-comment-title-label"> at </p>
+
+              <TextField
+                hintText="Company"
+                hintStyle={hintStyle}
+                inputStyle={inputStyle}
+                name="company"
+                underlineShow={false}
+                style={textFieldStyle}
+                fullWidth={true}
+                value={this.state.guideline.company}
+                onChange={this.handleChange}
+              />
+
+            </div>
+
+            </Dialog>
           </div>
-
-          </Dialog>
           <Snackbar
             open={this.state.snackbarOpen}
             message="Your guideline has been added."
@@ -206,6 +217,7 @@ class AddGuideline extends Component {
             autoHideDuration={4000}
             onRequestClose={this.handleRequestClose}
           />
+
         </div>
 
       );

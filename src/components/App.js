@@ -78,14 +78,16 @@ class App extends Component {
               open={this.state.open}
               docked={false}
               onRequestChange={(open) => this.setState({"open": open})}>
-              <div className="Top-level-menu-buttons">
-                {buttons}
+              <div className="Menu-div" onTouchTap={this.handleToggle}>
+                <div className="Top-level-menu-buttons">
+                  {buttons}
+                </div>
+                <Menu />
               </div>
-              <Menu />
               </Drawer>
             </div>
 
-          <div>
+          <div className="App-logo-div">
             <img className="App-logo-image" src={logo} alt="Logo"/>
           </div>
 

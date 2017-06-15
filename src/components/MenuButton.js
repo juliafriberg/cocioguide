@@ -4,7 +4,7 @@ import {setSelectedPage} from '../actions.js';
 
 import '../css/MenuButton.css';
 
-import {normalLabelStyle, activeLabelStyle} from '../styles.js';
+import {normalLabelStyle} from '../styles.js';
 
 class MenuButton extends Component {
   constructor(props) {
@@ -19,16 +19,14 @@ class MenuButton extends Component {
 
   render() {
     var activeLine = "";
-    var style = normalLabelStyle;
     if (this.props.title === this.props.selectedPage) {
       activeLine = <hr className="ActiveLine"/>
-      style = activeLabelStyle;
     }
 
     return (
         <div className="Page-button">
           <div className="Button" onTouchTap={this.setPage}>
-            <p style={style}> {this.props.title} </p>
+            <p className="Button-title"> {this.props.title} </p>
           </div>
           <div className="Active-line-div">
             {activeLine}
