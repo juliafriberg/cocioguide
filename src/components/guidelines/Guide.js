@@ -9,16 +9,18 @@ class Guide extends Component {
   render() {
     return (
       <div className="Guide-body">
+
         <div className="menu">
           <Menu />
         </div>
+
         <div className="content">
           <Category />
         </div>
+
       </div>
     );
   }
 }
-
 
 export default Guide;

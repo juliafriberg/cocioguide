@@ -26,24 +26,28 @@ class Category extends Component {
       <div className="Category-div">
 
         <div className="Category-header">
+
           <h1 className="Category-title">
             {selectedCategory}
           </h1>
+
           <div className="Add-guideline">
             <AddGuideline category={selectedCategory}/>
           </div>
+
         </div>
 
-        <p className="Category-text"> {categoryText}</p>
-          {isFetching && guidelines.length === 0 &&
+        <p className="Category-text">{categoryText}</p>
+
+        {isFetching && guidelines.length === 0 &&
           <h2>Loading...</h2>
         }
+
         {!isFetching && guidelines.length === 0 &&
           <h2>Empty.</h2>
         }
 
         {guidelineComponents}
-
 
       </div>
     );

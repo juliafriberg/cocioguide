@@ -1,18 +1,14 @@
 .App {
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .App-logo-image {
   max-width: 100%;
-  float: left;
 }
 
 .App-header {
-  height: 100px;
-  padding: 20px;
-  color: var(--logo);
+  padding-right: 20px;
+  padding-left: 20px;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -20,17 +16,10 @@
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   align-items: center;
-  margin-right: 20px;
-}
-
-.App-intro {
-  font-size: large;
-
 }
 
 .Mobile-menu {
   display: none;
-
 }
 
 .Web-menu {
@@ -44,10 +33,11 @@
   -webkit-flex: 1 0 0;
   flex: 1 0 0;
   flex-grow: 1;
+  padding-right: 20px;
 }
 
 .Top-level-menu-buttons {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 @media all and (max-width: 860px) {

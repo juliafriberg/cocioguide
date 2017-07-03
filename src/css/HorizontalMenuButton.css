@@ -1,18 +1,12 @@
 .ActiveHorizontalLine {
   border: 2px solid var(--highlight);
   border-radius: 3px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 90%;
+  width: 100%;
 }
 
 .Line-div {
   -webkit-flex: 1 0 0;
   flex: 1 0 0;
-}
-
-.NormalHorizontalLine {
-  border: 0px solid var(--highlight);
 }
 
 .Menu-button-div {
@@ -25,21 +19,16 @@
 }
 
 .Normal-menu-button:hover {
-  font-family: 'Exo', sans-serif;
-  color: white;
   font-weight: 600;
 
 }
 
-
 .Normal-menu-button {
   font-family: 'Exo', sans-serif;
-  font-weight: 300;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 15px;
   padding-bottom: 15px;
-  
 }
 
 .Horizontal {
@@ -49,8 +38,6 @@
   flex-direction: row;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   flex-grow: 1;
   width: calc(100% + 40px);
   margin-left: -40px;

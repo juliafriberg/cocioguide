@@ -83,17 +83,17 @@ class AddGuideline extends Component {
   };
 
     render() {
-
-
       const dialogActions = [
         <FlatButton
           label="Cancel"
           primary={false}
+          labelStyle={normalLabelStyle}
           onTouchTap={this.handleCloseDialog}
         />,
         <FlatButton
           label="Add"
           primary={true}
+          labelStyle={normalLabelStyle}
           disabled={!this.guidelineIsValid()}
           onTouchTap={this.addGuideline}
         />,

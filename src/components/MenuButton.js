@@ -24,13 +24,18 @@ class MenuButton extends Component {
     }
 
     return (
-        <div className="Page-button">
-          <div className="Button" onTouchTap={this.setPage}>
+        <div className="Page-button" onTouchTap={this.setPage}>
+
+
+
+          <div className="Button">
             <p className="Button-title"> {this.props.title} </p>
           </div>
+
           <div className="Active-line-div">
             {activeLine}
           </div>
+
         </div>
     );
   }

@@ -5,34 +5,53 @@
 }
 
 .Page-button {
-  margin-left: 40px;
-  -webkit-align-items: center;
-  align-items: center;
-
-}
-
-.Button {
-  text-transform: uppercase;
-  cursor: pointer;
+  margin-left: 30px;
 }
 
 .Button-title {
   font-family: 'Exo', sans-serif;
-  font-weight: 300;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.Button:hover {
-  font-family: 'Exo', sans-serif;
-  color: white;
+.Button-title:hover {
   font-weight: 600;
 }
 
 
 @media all and (max-width: 860px) {
+
+  .ActiveLine {
+    border: 2px solid var(--highlight);
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  .Active-Line-div {
+    order: 0;
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
+  }
+
+  .Button {
+    order: 1;
+    -webkit-flex: 3 0 0;
+    flex: 3 0 0;
+    text-align: left;
+    margin-left: 10px;
+
+  }
+
+  .Button-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 
   .Page-button {
     display: -webkit-flex;
@@ -41,34 +60,9 @@
     flex-direction: row;
     -webkit-align-items: center;
     align-items: center;
+    flex-grow: 1;
+    width: calc(100% + 40px);
     margin-left: 0px;
   }
-
-  .Active-Line-div {
-    order:0;
-  }
-
-  .Button {
-    order:1;
-    text-align: left;
-    margin-left: 10px;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-
-  .ActiveLine {
-    border: 2px solid var(--highlight);
-    border-radius: 3px;
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 10%;
-  }
-
-  .HiddenLine {
-    border: 0px solid var(--highlight);
-  }
-
-
-
 
 }

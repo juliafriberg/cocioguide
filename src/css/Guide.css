@@ -16,10 +16,8 @@
    margin-right: 40px;
 }
 .menu {
-  display: inline;
-   -webkit-flex: 1 0 0;
-   flex: 1 0 0;
-   flex-grow: 1;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
 }
 
 @media all and (max-width: 860px) {

@@ -11,6 +11,7 @@ import Drawer from 'material-ui/Drawer';
 import IconButton from 'material-ui/IconButton';
 import Menu from "./guidelines/Menu.js";
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
+import HeadRoom from 'react-headroom';
 
 import '../css/App.css';
 
@@ -38,12 +39,13 @@ class App extends Component {
     initializeDatabase()
   }
 
+  // Toggle for opening and closing the menu for mobile.
   handleToggle = () => this.setState({open: !this.state.open});
 
   render() {
+
     var buttons = Object.keys(this.state.menuItems).map((key, index) =>
       <MenuButton key={index} title={this.state.menuItems[key].title} />)
-
 
     document.body.style.backgroundImage = 'url('+backgroundImage+')';
 
@@ -59,8 +61,6 @@ class App extends Component {
 
     return (
 
-
-
       <div className="App">
         <div className="App-header">
 
@@ -70,8 +70,7 @@ class App extends Component {
               onTouchTap={this.handleToggle}
               style={large}
               iconStyle={largeIcon}>
-
-              <MenuIcon />
+                <MenuIcon />
             </IconButton>
 
             <Drawer
@@ -84,21 +83,23 @@ class App extends Component {
                 </div>
                 <Menu />
               </div>
-              </Drawer>
-            </div>
+            </Drawer>
+          </div>
 
           <div className="App-logo-div">
             <img className="App-logo-image" src={logo} alt="Logo"/>
           </div>
 
-
           <div className="Web-menu">
             {buttons}
           </div>
 
-
         </div>
-            {this.state.menuItems[this.props.selectedPage].content}
+
+        <div className="Content">
+          {this.state.menuItems[this.props.selectedPage].content}
+        </div>
+
       </div>
     );
   }
@@ -107,7 +108,6 @@ class App extends Component {
 function mapStateToProps(state) {
 
   const selectedPage = state['selectedPage']['selectedPage']
-
 
   return {
     selectedPage

@@ -18,7 +18,7 @@ class About extends Component {
     return (
 
       <div className="About-div">
-        <h1 className="About-title">
+        <h1>
           About
         </h1>
 
@@ -28,6 +28,8 @@ class About extends Component {
           <br />
           <p>These guidelines have been created as a part of a master’s thesis in Interaction Design and Technologies at Chalmers University of Technology. The entire report can be found <a href={report} download>here</a>.	</p>
         </div>
+
+        
         <div className="Persons-div">
           <div className="Person-div">
             <img className="Circular-image" src={julia} alt="Julia"/>
